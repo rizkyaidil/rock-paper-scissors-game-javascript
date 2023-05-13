@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffc83d;
+}
+
+.container {
+  padding: 32px 150px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.container.start .player-result p {
+  transform-origin: left;
+  animation: playerShake 0.7s ease infinite;
+  -webkit-animation: playerShake 0.7s ease infinite;
+}
+@keyframes playerShake {
+  50% {
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+  }
+}
+
+.container.start .com-result p {
+  transform-origin: right;
+  animation: comShake 0.7s ease infinite;
+  -webkit-animation: comShake 0.7s ease infinite;
+}
+@keyframes comShake {
+  50% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+  }
+}
+
+.result-box {
+  display: flex;
+  column-gap: 112px;
+}
+
+.result-box p {
+  font-size: 100px;
+  text-align: center;
+}
+
+.result-box h2 {
+  text-align: center;
+}
+
+.result {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  margin-top: 48px;
+}
+
+.choice-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.container.start .choice-box {
+  pointer-events: none;
+}
+
+.choice-box button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.5;
+  border: none;
+  background: transparent;
+  transition: opacity 0.3 ease;
+  -webkit-transition: opacity 0.3 ease;
+  -moz-transition: opacity 0.3 ease;
+  -ms-transition: opacity 0.3 ease;
+  -o-transition: opacity 0.3 ease;
+}
+
+.choice-box button:hover {
+  opacity: 1;
+}
+
+.choice-box button p:nth-child(1) {
+  font-size: 50px;
+  pointer-events: none;
+}
+
+.choice-box button p:nth-child(2) {
+  font-size: 20px;
+  margin-top: 8px;
+  pointer-events: none;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .result-box {
+    align-items: center;
+    row-gap: 32px;
+  }
+
+  .result-box p {
+    font-size: 64px;
+  }
+
+  .result {
+    font-size: 24px;
+    margin-top: 40px;
+  }
+
+  .choice-box {
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  .choice-box button {
+    margin-bottom: 16px;
+  }
+
+  .choice-box button p:nth-child(1) {
+    font-size: 40px;
+  }
+
+  .choice-box button p:nth-child(2) {
+    font-size: 16px;
+    margin-top: 4px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .result-box {
+    background-color: #ffffff;
+    padding: 50px 10px;
+    align-items: center;
+    row-gap: 32px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  .result {
+    font-size: 24px;
+    margin-top: 48px;
+  }
+
+  .result-box p {
+    font-size: 48px;
+  }
+
+  .choice-box {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 32px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  .choice-box button {
+    opacity: 1;
+    padding: 28px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  .choice-box button p:nth-child(1) {
+    font-size: 32px;
+  }
+
+  .choice-box button p:nth-child(2) {
+    font-size: 14px;
+    margin-top: 2px;
+  }
+}
